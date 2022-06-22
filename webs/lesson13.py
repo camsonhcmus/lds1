@@ -81,7 +81,7 @@ def app():
 		elif cloth == 6:
 			return Image.open('./picture/p3.PNG')
 		elif cloth == 7:
-			return Image.open('./picture/p6.PNG')
+			return Image.open('./picture/p6.png')
 		elif cloth == 8:
 			return Image.open('./picture/p5.PNG')
 		elif cloth == 9:
