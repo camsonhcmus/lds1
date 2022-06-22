@@ -1,0 +1,12 @@
+[theme]
+base="light"
+backgroundColor="#fdfefe"
+secondaryBackgroundColor="#e0e0ef"
+textColor ="#000000"
+font="serif"
+
+[server]
+port = 8081
+runOnSave = true
+
+
