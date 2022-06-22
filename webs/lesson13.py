@@ -45,7 +45,7 @@ def app():
 		st.image(Image.open('./picture/p3.PNG'), width=200)
 
 	with col7:
-		st.image(Image.open('./picture/p6.PNG'), width=200)
+		st.image(Image.open('./picture/p6.png'), width=200)
 
 	with col8:
 		st.image(Image.open('./picture/p5.PNG'), width=200)
