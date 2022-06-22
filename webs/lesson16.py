@@ -1,0 +1,48 @@
+import streamlit as st
+from PIL import Image
+import random
+import pandas as pd
+
+def app():
+	image = Image.open('./picture/khtn.PNG')
+	st.image(image, width=500)
+
+	st.markdown("------")
+
+	st.markdown("""
+	<style>
+	.big-font {
+    	font-size:80px !important;
+	}
+	</style>
+	""", unsafe_allow_html=True)
+
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 16: Dictionary (mở rộng)</center></p>', unsafe_allow_html=True)
+
+	st.write("### Hãy giúp mình xắp xếp lịch học hè:")
+
+	st.image(Image.open('./picture/schedule.jpg'), width=500)
+
+	
+	mon = st.multiselect("Thứ hai", ("Toán", "Văn", "Sử", "Địa", "Sinh Học"))
+	tue = st.multiselect("Thứ ba", ("Toán", "Văn", "Sử", "Anh", "Hóa"))
+	wed = st.multiselect("Thứ tư", ("Vật Lý", "Hóa", "Sử", "Địa", "Sinh Học"))
+	thu = st.multiselect("Thứ năm", ("Vật Lý", "Hóa", "Sinh", "Thể dục", "Thể dục"))
+	fri = st.multiselect("Thứ sáu", ("Toán", "Văn", "Sinh", "Tin học", "Tin học"))
+
+	
+	
+	if st.button("Hiện thời khóa biểu: "):
+		# try:
+		if len(mon) == 5 and len(tue) == 5 and len(wed) == 5 and len(thu) == 5 and len(fri) == 5:
+			sch = {'Thứ hai': mon, 'Thứ ba': tue, 'Thứ tư': wed, 'Thứ năm': thu, 'Thứ sáu': fri}
+			df = pd.DataFrame(data=sch, index=["Môn 1", "Môn 2", "Môn 3", "Môn 4", "Môn 5"])
+			st.dataframe(data=df)
+		else:
+			st.error("#### Chọn đủ 5 môn bạn nhé :smile:")
+		# except:
+		# 	st.error("#### Chọn đủ 5 môn bạn nhé :smile:")
+		#else:
+		#	st.write("#### Chọn đủ 5 môn bạn nhé :smile:")
+
+		
