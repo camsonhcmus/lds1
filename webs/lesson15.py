@@ -45,47 +45,47 @@ def app():
 			return Image.open('./picture/picture.jpg')
 
 	if st.button('oẳn tù tì'):
-		number = random.randint(1, 3)
-		player2 = point2pic(number)
-		col1, col2, col3 = st.columns(3)
+	number = random.randint(1, 3)
+	player2 = point2pic(number)
+	col1, col2, col3 = st.columns(3)
 
-		with col1:
-			st.image(convert(player), width=200)
-			st.write("### Bạn")
-		with col2:
-			st.image(Image.open('./picture/v-s.jpg'), width=200)
-		with col3:
-			st.image(convert(player2), width=200)
-			st.write("### Đối thủ")
-		st.write("----")
-		st.write("## Kết quả: ")
-		st.write(" ")
-		st.write(" ")
+	with col1:
+		st.image(convert(player), width=200)
+		st.write("### Bạn")
+	with col2:
+		st.image(Image.open('./picture/v-s.jpg'), width=200)
+	with col3:
+		st.image(convert(player2), width=200)
+		st.write("### Đối thủ")
+	st.write("----")
+	st.write("## Kết quả: ")
+	st.write(" ")
+	st.write(" ")
 
-		if player == "Búa" and player2 == "Búa":
-			st.write("Huề rồi bạn")
+	if player == "Búa" and player2 == "Búa":
+		st.write("Huề rồi bạn")
 
-		if player == "Búa" and player2 == "Kéo":
-			st.write("Bạn thắng rồi")
+	if player == "Búa" and player2 == "Kéo":
+		st.write("Bạn thắng rồi")
 
-		if player == "Búa" and player2 == "Giấy":
-			st.write("Bạn thua rồi")
+	if player == "Búa" and player2 == "Giấy":
+		st.write("Bạn thua rồi")
 
-		if player == "Kéo" and player2 == "Búa":
-			st.write("Bạn thua rồi ")
+	if player == "Kéo" and player2 == "Búa":
+		st.write("Bạn thua rồi ")
 
-		if player == "Kéo" and player2 == "Kéo":
-			st.write("Huề rồi bạn")
+	if player == "Kéo" and player2 == "Kéo":
+		st.write("Huề rồi bạn")
 
-		if player == "Kéo" and player2 == "Giấy":
-			st.write("Bạn thắng rồi")
+	if player == "Kéo" and player2 == "Giấy":
+		st.write("Bạn thắng rồi")
 
-		if player == "Giấy" and player2 == "Kéo":
-			st.write("Bạn thua rồi")
+	if player == "Giấy" and player2 == "Kéo":
+		st.write("Bạn thua rồi")
 
-		if player == "Giấy" and player2 == "Búa":
-			st.write("Bạn thắng rồi")
+	if player == "Giấy" and player2 == "Búa":
+		st.write("Bạn thắng rồi")
 
-		if player == "Giấy" and player2 == "Giấy":
-			st.write("Huề rồi bạn")
+	if player == "Giấy" and player2 == "Giấy":
+		st.write("Huề rồi bạn")
 
