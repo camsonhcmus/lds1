@@ -44,7 +44,7 @@ def app():
 		elif player == -1:
 			return Image.open('./picture/picture.jpg')
 
-	
+	#if st.button('oẳn tù tì'):
 	number = random.randint(1, 3)
 	player2 = point2pic(number)
 	col1, col2, col3 = st.columns(3)
