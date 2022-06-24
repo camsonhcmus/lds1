@@ -19,13 +19,15 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 17: List (mở rộng)</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Chào mừng bạn đến cuộc chơi đoán chữ tiếng anh")
+	st.markdown("## Chào mừng bạn đến cuộc chơi đoán từ tiếng anh")
 
 	st.image(Image.open('./picture/wof.jpg'), width=500)
 
 	st.write("""### Hãy đọc kỹ câu gợi ý:
 
 		- Đây là 1 lục địa
+		
+	- Có Tổng cộng 10 từ
 
 	- Quanh năm cả châu lục đều phủ lớp băng
 
