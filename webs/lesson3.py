@@ -18,7 +18,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 3: Cấu trúc điều kiện</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Hãy đoán con số ngẫu nhiên may mắn từ 1 đến 5")
+	st.markdown("## Hãy đoán con số ngẫu nhiên may mắn từ 1 đến 5 trong vòng 3 lượt")
 
 	st.image(Image.open('./picture/lucky.png'), width=500)
 
@@ -36,5 +36,8 @@ def app():
 		if pre_num == number_test:
 			st.write("Chính xác :tada:")
 			st.balloons()
+			
+		elif pre_num <= number_test:
+			st.write("Sai :cry: Cố gắng nữa bạn nhé")
 		else:
 			st.write("Sai :cry: Cố gắng nữa bạn nhé")
