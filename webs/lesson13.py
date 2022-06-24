@@ -18,7 +18,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 13: Random</center></p>', unsafe_allow_html=True)
 
-	st.markdown('### Chào mửng bạn đến với tủ đồ ngẫu nhiên')
+	st.markdown('### Hãy phối đồ dựa trên tủ áo đang có')
 
 	st.markdown('### Đây sẽ là tủ áo')
 
@@ -93,7 +93,7 @@ def app():
 		elif cloth == 12:
 			return Image.open('./picture/air4.jpg')
 
-	if st.button("Tạo một bộ đồ ngẫu nhiên"):
+	if st.button("Phối đồ ngẫu nhiên"):
 		a1 = random.randint(1,4)
 		a2 = random.randint(5,8)
 		a3 = random.randint(9,12)
