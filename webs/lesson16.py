@@ -19,16 +19,16 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 16: Dictionary (mở rộng)</center></p>', unsafe_allow_html=True)
 
-	st.write("### Hãy giúp mình xắp xếp lịch học hè:")
+	st.write("### Hãy giúp mình xắp xếp lịch học hè (1 ngày 5 môn ):")
 
 	st.image(Image.open('./picture/schedule.jpg'), width=500)
 
 	
-	mon = st.multiselect("Thứ hai", ("Toán", "Văn", "Sử", "Địa", "Sinh Học"))
-	tue = st.multiselect("Thứ ba", ("Toán", "Văn", "Sử", "Anh", "Hóa"))
-	wed = st.multiselect("Thứ tư", ("Vật Lý", "Hóa", "Sử", "Địa", "Sinh Học"))
-	thu = st.multiselect("Thứ năm", ("Vật Lý", "Hóa", "Sinh", "Thể dục", "Thể dục"))
-	fri = st.multiselect("Thứ sáu", ("Toán", "Văn", "Sinh", "Tin học", "Tin học"))
+	mon = st.multiselect("Thứ hai", ("Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa", "Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa"))
+	tue = st.multiselect("Thứ ba", ("Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa", "Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa"))
+	wed = st.multiselect("Thứ tư", ("Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa", "Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa"))
+	thu = st.multiselect("Thứ năm", ("Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa", "Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa"))
+	fri = st.multiselect("Thứ sáu", ("Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa", "Toán", "Văn", "Sử", "Địa", "Sinh", "Anh", "Vật Lý", "Hóa"))
 
 	
 	
