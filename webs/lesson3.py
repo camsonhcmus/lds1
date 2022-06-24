@@ -38,6 +38,8 @@ def app():
 			st.balloons()
 			
 		elif pre_num <= number_test:
-			st.write("Sai :cry: Cố gắng nữa bạn nhé")
-		else:
-			st.write("Sai :cry: Cố gắng nữa bạn nhé")
+			st.write("Sai :cry: con số bạn nhỏ hơn con số may mắn")
+			
+		elif pre_num >= number_test:
+			st.write("Sai :cry: con số bạn lớn hơn con số may mắn")
+
