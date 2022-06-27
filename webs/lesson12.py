@@ -1,6 +1,8 @@
 import streamlit as st
 from PIL import Image
 import random
+import pandas as pd
+import numpy as np
 
 def app():
 	image = Image.open('./picture/khtn.PNG')
@@ -24,13 +26,10 @@ def app():
 
 	st.write("""### Luật chơi sẽ như sau:
 
-		- Nếu bạn lắc được xí ngầu với 2 con số giống nhau sẽ được cộng lại 2 con số
+		- Trong vòng 3 lượt hãy lắc con số lớn hơn đối thủ
 
-	- Nếu bạn lắc được xí ngầu khác nhau thì số xí ngầu 1 sẽ trừ số của xí ngầu 2
+	- Nếu bạn có số lượt thắng hơn đối thủ thì bạn sẽ là người chiến thắng
 
-	- Bạn sẽ thua nếu bị số âm (ví dụ: xí ngầu 1 là 2 và xí ngầu 2 là 4 thì 2 - 4 = -2 suy ra bạn sẽ thua do kết quả âm)
-
-	- Bạn sẽ thắng nếu lắc được 2 con số 6
 		""")
 
 
@@ -41,11 +40,22 @@ def app():
 		
 		return number
 
-		
+	"session:", st.session_state	
+
+	if "turn" not in st.session_state:
+		st.session_state["turn"] = 0
+	if "countdata" not in st.session_state:
+		st.session_state["countdata"] = pd.DataFrame(columns=['lượt', 'Tổng số điểm có được sau mỗi lượt'])
+	if "countpoint" not in st.session_state:
+		st.session_state["countpoint"] = 0
 
 
 
 	if st.button('lắc'):
+		st.session_state.turn += 1
+
+		a = st.session_state.turn
+		st.write("##### Bạn đang chơi lượt thứ %s" %(st.session_state.turn))
 		number = rolldice(1,6)
 		number1 = rolldice(1,6)
 
@@ -76,7 +86,7 @@ def app():
 				image6 = Image.open('./picture/6.PNG')
 				st.image(image6, width=150)
 
-			st.markdown("### Xí ngầu 1")
+			st.markdown("### Bạn")
 
 
 		with col2:
@@ -104,4 +114,44 @@ def app():
 				image6 = Image.open('./picture/6.PNG')
 				st.image(image6, width=150)
 
-			st.markdown("### Xí ngầu 2")
+			st.markdown("### Đối thủ")
+
+		st.markdown(" ")
+		st.markdown(" ")
+		st.markdown(" ")
+
+
+		if number == number1:
+			st.markdown("##### Huề rồi bạn")
+		if number < number1:
+			st.markdown("##### Bạn đã thua")
+			
+		if number > number1:
+			st.markdown("##### Bạn đã thắng")
+			if st.session_state.turn < 4:
+				st.session_state.countpoint += 1
+
+		st.markdown("----")
+
+		st.session_state.countdata.loc[st.session_state.turn] = [st.session_state.turn, st.session_state.countpoint]
+		
+		if st.session_state.turn < 4:
+			st.write("Bảng số điểm của bạn sau mỗi lượt")
+			st.dataframe(st.session_state.countdata)
+			st.markdown(" ")
+			st.write("##### Số điểm bạn đang có %s điểm" %(st.session_state.countpoint))
+		else:
+			st.write('##### Bạn đã hết lượt chơi hãy Hãy bấm nút "Chơi lại" nếu bạn muốn chơi')
+			st.markdown(" ")
+			st.write("##### Tổng số điểm bạn có là %s điểm" %(st.session_state.countpoint))
+
+	st.markdown("----")
+	st.write('Hãy bấm nút "Chơi lại" nếu bạn muốn chơi lại hoặc refresh lượt chơi')
+	if st.button('Chơi lại'):
+
+		for key in st.session_state.keys():
+			del st.session_state[key]
+
+		st.session_state.turn = 0
+		st.session_state.countdata = pd.DataFrame(columns=['lượt', 'Tổng số điểm có được sau mỗi lượt'])
+		st.session_state.countpoint = 0
