@@ -18,50 +18,50 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 10: Set</center></p>', unsafe_allow_html=True)
 
-	st.write("## Mình sẽ giúp bạn xắp xếp đồ đạc vào tủ theo thứ tự chữ cái đầu tiên")
+	st.write("## Mình sẽ giúp bạn xắp xếp các màu bạn chọn theo thứ tự của cầu vòng")
 
-	st.image(Image.open('./picture/robear.jpg'), width=800)
+	st.image(Image.open('./picture/rainbow.jpg'), width=800)
 
-	lst1 = ["Dây chuyền", "Nhẫn", "Sách vở","Áo quần",  "Hình ảnh", "Áo quần", "Búp bê","Áo quần","Nhẫn", "Kỷ yếu"]
+	lst1 = ["Màu đỏ", "Màu cam", "Màu vàng","Màu cam",  "Màu xanh lá", "Màu xanh lá", "Màu xanh dương","Màu chàm","Màu tím", "Màu tím"]
 
-	thing = st.multiselect("Đồ vật", options= lst1)
+	color = st.multiselect("Đồ vật", options= lst1)
 
 	def stuff2number(stuff):
-		if stuff == "Dây chuyền":
-			return 3
-		elif stuff == "Nhẫn":
-			return 6
-		elif stuff == "Sách vở":
-			return 7
-		elif stuff == "Hình ảnh":
-			return 4
-		elif stuff == "Áo quần":
+		if stuff == "Màu đỏ":
 			return 1
-		elif stuff == "Búp bê":
+		elif stuff == "Màu cam":
 			return 2
-		elif stuff == "Kỷ yếu":
+		elif stuff == "Màu vàng":
+			return 3
+		elif stuff == "Màu xanh lá":
+			return 4
+		elif stuff == "Màu xanh dương":
 			return 5
+		elif stuff == "Màu chàm":
+			return 6
+		elif stuff == "Màu tím":
+			return 7
 
 	def convert(stuff):
-		if stuff == 3:
-			return Image.open('./picture/neckl.jpg')
-		elif stuff == 6:
-			return Image.open('./picture/ring.jpg')
-		elif stuff == 7:
-			return Image.open('./picture/book.jpg')
-		elif stuff == 4:
-			return Image.open('./picture/picture.jpg')
-		elif stuff == 1:
-			return Image.open('./picture/cloth.jpg')
+		if stuff == 1:
+			return Image.open('./picture/red.jpg')
 		elif stuff == 2:
-			return Image.open('./picture/doll.jpg') 
+			return Image.open('./picture/orange.jpg')
+		elif stuff == 3:
+			return Image.open('./picture/yellow.jpg')
+		elif stuff == 4:
+			return Image.open('./picture/green.jpg')
 		elif stuff == 5:
-			return Image.open('./picture/kyyeu.jpg')
+			return Image.open('./picture/blue.jpg')
+		elif stuff == 6:
+			return Image.open('./picture/indigo.jpg') 
+		elif stuff == 7:
+			return Image.open('./picture/purple.png')
 
 
 	con_thing = []
 
-	for i in thing:
+	for i in color:
 		nu = stuff2number(i)
 		con_thing.append(nu)
 
@@ -121,7 +121,7 @@ def app():
 			pass
 
 
-	if st.button("Xắp xếp lại vào tủ"):
+	if st.button("Xắp xếp lại theo cầu vòng"):
 
 		sett = set(con_thing)
 
