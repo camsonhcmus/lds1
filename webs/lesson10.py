@@ -18,7 +18,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 10: Set</center></p>', unsafe_allow_html=True)
 
-	st.write("## Mình sẽ giúp bạn xắp xếp đồ đạc vào tủ ngăn nấp và thứ tự")
+	st.write("## Mình sẽ giúp bạn xắp xếp đồ đạc vào tủ theo thứ tự chữ cái đầu tiên")
 
 	st.image(Image.open('./picture/robear.jpg'), width=800)
 
