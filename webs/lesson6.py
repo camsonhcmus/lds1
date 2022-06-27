@@ -26,7 +26,7 @@ def app():
 	st.image(Image.open('./picture/talk.jpg'), width=500)
 	
 
-	word = st.text_input("Hãy nhập câu đối thoại rồi nhấn enter: ", value=" ")
+	word = st.text_input("Hãy nhập câu rồi nhấn enter: ", value=" ")
 	ran = st.slider("chọn khoảng muốn nói", 0, len(word), (0, len(word)))
 
 
