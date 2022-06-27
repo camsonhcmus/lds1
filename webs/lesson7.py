@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 import random
 import time
+from datetime import datetime
+import calendar
 
 def app():
 	image = Image.open('./picture/khtn.PNG')
@@ -19,7 +21,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 7: Datetime</center></p>', unsafe_allow_html=True)
 
-	st.write("## Hãy nhập thông tin thời gian hiện tại vào robot")
+	st.write("## Hãy nhập thông tin đúng về thời gian hiện tại vào robot")
 
 	st.image(Image.open('./picture/robot.png'), width=250)
 
@@ -63,14 +65,35 @@ def app():
 		else:
 			return "Dec"
 
+	def convert_day(day):
+		if day == 0:
+			return "Thứ hai"
+		if day == 1:
+			return "Thứ ba"
+		if day == 2:
+			return "Thứ tư"
+		if day == 3:
+			return "Thứ năm"
+		if day == 4:
+			return "Thứ sáu"
+		if day == 5:
+			return "Thứ bảy"
+		if day == 6:
+			return "Chủ nhật"
+       
 
 
 	if st.button("Nhập kết quả: "):
 
 		ti = time.asctime(time.localtime(time.time()))
 		spl_ti = ti.split(" ")
+		currentdate = datetime.now().timetuple()
+		days = calendar.weekday(currentdate[0], currentdate[1], currentdate[2])
+
 
 		if day==int(spl_ti[2]) and convert(month)==spl_ti[1] and year==int(spl_ti[4]):
-			st.write("Cảm ơn bạn nha :smile:")
+			st.write("Chính xác :smile:")
+			st.write("Thời gian hiện tại là: %s, ngày %s tháng %s năm %s" % (convert_day(days), currentdate[2], currentdate[1], currentdate[0]))
 		else:
-			st.write("Bạn nên kiểm tra lại thời gian :cry:")
+			st.write("Bạn nên kiểm tra lại thời gian :cry: vì:")
+			st.write("Thời gian hiện tại không phải: %s, ngày %s tháng %s năm %s" % (convert_day(calendar.weekday(year, month, day)), day, month, year))
