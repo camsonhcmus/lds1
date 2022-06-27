@@ -27,11 +27,11 @@ def app():
 	main_course = st.multiselect("Menu món chính", options=["Cá tai tượng chiên xù", "Gà bó xôi", "Mực xào sa tế",  "Cá lóc hấp bầu", "Lẩu bò", "Cơm chiên dương châu"])
 	dessert = st.multiselect("Menu tráng miệng", options=["Các loại trái cây", "Rau câu", "Chè đậu xanh"])
 
-	menu_b = st.radio("Hãy chọn loại menu", options=["menu tách rời", "menu lớn"])
+	menu_b = st.radio("Cách thể hiện menu", options=["Chia 3 menu nhỏ", "Tạo thành 1 menu"])
 
 	full_menu=list(itertools.chain(appetizer, main_course, dessert))
 
-	menu_delete = st.multiselect("Hãy chọn món để xóa", options=full_menu)
+	#menu_delete = st.multiselect("Hãy chọn món để xóa", options=full_menu)
 
 	def convert(dish):
 		if dish == "Gỏi ngó sen tôm thịt":
@@ -73,7 +73,7 @@ def app():
 		if i in dessert_set:
 			item3 = dessert.remove(i)
 
-	if menu_b == "menu tách rời":
+	if menu_b == "Chia 3 menu nhỏ":
 		col1, col2, col3 = st.columns(3)
 		with col1:
 			st.write("##### menu khai vị")
