@@ -65,13 +65,13 @@ def app():
 	main_course_set = set(main_course)
 	dessert_set = set(dessert)
 
-	for i in menu_delete:
-		if i in appetizer_set:
-			item1 = appetizer.remove(i)
-		if i in main_course_set:
-			item2 = main_course.remove(i)
-		if i in dessert_set:
-			item3 = dessert.remove(i)
+# 	for i in menu_delete:
+# 		if i in appetizer_set:
+# 			item1 = appetizer.remove(i)
+# 		if i in main_course_set:
+# 			item2 = main_course.remove(i)
+# 		if i in dessert_set:
+# 			item3 = dessert.remove(i)
 
 	if menu_b == "Chia 3 menu nhỏ":
 		col1, col2, col3 = st.columns(3)
