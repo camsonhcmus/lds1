@@ -125,6 +125,7 @@ def app():
 			st.markdown("##### Huề rồi bạn")
 		if number < number1:
 			st.markdown("##### Bạn đã thua")
+
 			
 		if number > number1:
 			st.markdown("##### Bạn đã thắng")
@@ -140,10 +141,18 @@ def app():
 			st.dataframe(st.session_state.countdata)
 			st.markdown(" ")
 			st.write("##### Số điểm bạn đang có %s điểm" %(st.session_state.countpoint))
+
+
 		else:
 			st.write('##### Bạn đã hết lượt chơi hãy Hãy bấm nút "Chơi lại" nếu bạn muốn chơi')
 			st.markdown(" ")
 			st.write("##### Tổng số điểm bạn có là %s điểm" %(st.session_state.countpoint))
+
+		if st.session_state.turn > 3:
+			if st.session_state.countpoint >= 2:
+				st.write("##### Bạn đã là người thắng cuộc")
+			else:
+				st.write("##### Đối thủ của bạn là người thắng cuộc")
 
 	st.markdown("----")
 	st.write('Hãy bấm nút "Chơi lại" nếu bạn muốn chơi lại hoặc refresh lượt chơi')
