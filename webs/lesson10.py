@@ -22,7 +22,7 @@ def app():
 
 	st.image(Image.open('./picture/rainbow.jpg'), width=800)
 
-	lst1 = ["Màu đỏ", "Màu cam", "Màu vàng","Màu cam",  "Màu xanh lá", "Màu xanh lá", "Màu xanh dương","Màu chàm","Màu tím", "Màu tím"]
+	lst1 = ["Màu đỏ", "Màu vàng","Màu cam",  "Màu xanh lá", "Màu xanh dương","Màu chàm","Màu tím"]
 
 	color = st.multiselect("Đồ vật", options= lst1)
 
