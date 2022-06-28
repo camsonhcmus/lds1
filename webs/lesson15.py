@@ -22,7 +22,17 @@ def app():
 
 	st.image(Image.open('./picture/rpsc.jpg'), width=500)
 
-	player = st.radio("Bạn ra gì?", options=["Búa", "Kéo", "Giấy"])
+	st.markdown(
+	""" <style>
+			div[role="radiogroup"] >  :first-child{
+				display: none !important;
+			}
+		</style>
+		""",
+	unsafe_allow_html=True
+	)
+
+	player = st.radio("Bạn ra gì?", options=["0", "Búa", "Kéo", "Giấy"])
 
 	def point2pic(player):
 		if player == 3:
@@ -31,7 +41,7 @@ def app():
 			return "Kéo"
 		elif player == 1:
 			return "Giấy"
-		else:
+		elif player == 0:
 			return "Búa"
 
 	def convert(player):
@@ -43,24 +53,30 @@ def app():
 			return Image.open('./picture/paper.png')
 		elif player == -1:
 			return Image.open('./picture/picture.jpg')
+		else:
+			pass
 
 	#if st.button('oẳn tù tì'):
 	number = random.randint(1, 3)
 	player2 = point2pic(number)
-	col1, col2, col3 = st.columns(3)
+	if player == "Búa"or player == "Kéo"or player == "Giấy":
+		col1, col2, col3 = st.columns(3)
 
-	with col1:
-		st.image(convert(player), width=200)
-		st.write("### Bạn")
-	with col2:
-		st.image(Image.open('./picture/v-s.jpg'), width=200)
-	with col3:
-		st.image(convert(player2), width=200)
-		st.write("### Đối thủ")
-	st.write("----")
-	st.write("## Kết quả: ")
-	st.write(" ")
-	st.write(" ")
+		with col1:
+			try:
+				st.image(convert(player), width=200)
+				st.write("### Bạn")
+			except:
+				pass
+		with col2:
+			st.image(Image.open('./picture/v-s.jpg'), width=200)
+		with col3:
+			st.image(convert(player2), width=200)
+			st.write("### Đối thủ")
+		st.write("----")
+		st.write("## Kết quả: ")
+		st.write(" ")
+		st.write(" ")
 
 	if player == "Búa" and player2 == "Búa":
 		st.write("Huề rồi bạn")
@@ -88,4 +104,5 @@ def app():
 
 	if player == "Giấy" and player2 == "Giấy":
 		st.write("Huề rồi bạn")
+
 
