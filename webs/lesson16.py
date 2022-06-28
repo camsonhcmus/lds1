@@ -36,7 +36,7 @@ def app():
 		# try:
 		if len(mon) == 5 and len(tue) == 5 and len(wed) == 5 and len(thu) == 5 and len(fri) == 5:
 			sch = {'Thứ hai': mon, 'Thứ ba': tue, 'Thứ tư': wed, 'Thứ năm': thu, 'Thứ sáu': fri}
-			df = pd.DataFrame(data=sch, index=["Môn 1", "Môn 2", "Môn 3", "Môn 4", "Môn 5"])
+			df = pd.DataFrame(data=sch, index=["Tiết 1", "Tiết 2", "Tiết 3", "Tiết 4", "Tiết 5"])
 			st.dataframe(data=df)
 		else:
 			st.error("#### Chọn đủ 5 môn bạn nhé :smile:")
