@@ -110,7 +110,7 @@ def app():
 		stu =st.checkbox("Hiện câu hỏi liên quan tới học sinh")
 
 		if stu:
-			onestu = st.radio("Ngoài sách vở cái gì cũng quan trọng với học sinh ?", options=["Kiến thức", "Bằng cấp", "Bạn bè", "Tất cả các ý trên"])
+			onestu = st.radio("Điều gì quan trọng với học sinh ?", options=["Kiến thức", "Bằng cấp", "Bạn bè", "Tất cả các ý trên"])
 
 			if onestu == "Tất cả các ý trên":
 				
