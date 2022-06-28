@@ -18,13 +18,13 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 3: Cấu trúc điều kiện</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Hãy đoán con số ngẫu nhiên may mắn từ 1 đến 5 trong vòng 3 lượt")
+	st.markdown("## Hãy đoán con số ngẫu nhiên may mắn từ 1 đến 5 trong vòng 7 lượt")
 
 	st.image(Image.open('./picture/lucky.png'), width=500)
 
 	st.write("""### Luật chơi sẽ như sau:
 
-		- Trong vòng 3 lượt, bạn giành được chiến thắng nếu đoán trúng hơn 2 lần
+		- Trong vòng 7 lượt, bạn giành được chiến thắng nếu đoán trúng hơn 2 lần
 
 	- Nếu bạn đoán trúng dưới 2 lượt bạn sẽ thua
 
@@ -73,7 +73,7 @@ def app():
 		# elif st.session_state.turn1 >= 4 and pre_num == number_test: 
 		# 	st.write('Bạn đã hết lượt hãy bắm nút "Chơi lại" nếu như bạn muốn thử vận may nữa')
 
-		if st.session_state.turn1 < 4:
+		if st.session_state.turn1 < 7:
 			if pre_num == number_test:
 				st.write("Chính xác :tada:")
 				st.balloons()
@@ -86,7 +86,7 @@ def app():
 				st.write("Sai :cry: con số bạn lớn hơn con số may mắn")
 			st.write("##### Số lần bạn đoán trúng là: %s lần" %(st.session_state.point1))
 
-		elif st.session_state.turn1 >= 4:
+		elif st.session_state.turn1 >= 7:
 			if st.session_state.point1 >= 2:
 				st.write("##### Bạn đã thắng cuộc")
 			else:
