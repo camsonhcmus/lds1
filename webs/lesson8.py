@@ -27,7 +27,7 @@ def app():
 	main_course = st.multiselect("Menu món chính", options=["Cá tai tượng chiên xù", "Gà bó xôi", "Mực xào sa tế",  "Cá lóc hấp bầu", "Lẩu bò", "Cơm chiên dương châu"])
 	dessert = st.multiselect("Menu tráng miệng", options=["Các loại trái cây", "Rau câu", "Chè đậu xanh"])
 
-	menu_b = st.radio("Cách thể hiện menu", options=["Chia 3 menu nhỏ", "Tạo thành 1 menu"])
+	menu_b = st.radio("Cách thể hiện menu", options=["Chia nhỏ 3 menu", "Tạo thành 1 menu"])
 
 	full_menu=list(itertools.chain(appetizer, main_course, dessert))
 
