@@ -21,7 +21,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 7: Datetime</center></p>', unsafe_allow_html=True)
 
-	st.write("## Hãy nhập thông tin đúng về thời gian hiện tại vào robot")
+	st.write("## Hãy nhập thời gian hiện tại vào robot")
 
 	st.image(Image.open('./picture/robot.png'), width=250)
 
