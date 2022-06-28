@@ -20,9 +20,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 1: Biến và các kiểu dữ liệu cơ sở</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Hãy hoàn thành câu giới thiệu của chính mình")
-
-	st.image(Image.open('./picture/hi.jpg'), width=500)
+	st.image(Image.open('./picture/intro.jpg'), width=500)
 
 	name = st.text_input("Họ và tên: ")
 	age = st.slider("Tuổi", 10, 20, 1)
@@ -51,11 +49,10 @@ def app():
 	"Quận 12", 
 	"Huyện Nhà Bè", 
 	"Tỉnh thành khác"])
-	hob = st.multiselect("Sở thích", options=["Đọc sách", "Chơi game", "Ăn uống",  "Thể thao", "Đi dạo phố", "Đi shopping", "Đi chơi với bạn"])
+	hob = st.multiselect("Sở thích", options=["Đọc sách", "Chơi game", "Ăn uống",  "Thể thao", "Đi dạo phố", "Đi shopping", "Đi chơi với bạn", "Khác"])
 	if st.button("Hoàn thành"):
-		st.write("Em tên là %s, %s tuổi, đang học trường %s , đang sống ở %s và em có sở thích là %s. Hiện em đang tham gia lớp LDS1 và rất vui được găp các bạn." % (name, age, school, location, ', '.join(map(str, hob))))
+		st.write("Em tên là %s, %s tuổi, đang học trường %s , sống ở %s và em có sở thích %s. Hiện em đang tham gia lớp LDS1 và rất vui được găp các bạn." % (name, age, school, location, ', '.join(map(str, hob))))
 
-	
 
 
 
