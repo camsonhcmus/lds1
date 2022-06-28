@@ -26,9 +26,11 @@ def app():
 
 	st.write("""### Luật chơi sẽ như sau:
 
-		- Trong vòng 3 lượt hãy lắc con số lớn hơn đối thủ
+		- Trong vòng 3 lượt khi lắc con số lớn hơn đối thủ thì sẽ được 1 điểm
 
-	- Nếu bạn có số lượt thắng hơn đối thủ thì bạn sẽ là người chiến thắng
+	- Nếu lắc con số nhỏ hơn hoặc bằng đối thủ thì sẽ được 0 điểm
+
+	- Nếu bạn có tổng số điểm hơn đối thủ thì bạn sẽ là người chiến thắng
 
 		""")
 
@@ -44,11 +46,10 @@ def app():
 
 	if "turn" not in st.session_state:
 		st.session_state["turn"] = 0
-	if "countdata" not in st.session_state:
-		st.session_state["countdata"] = pd.DataFrame(columns=['lượt', 'Tổng số điểm có được sau mỗi lượt'])
+	# if "countdata" not in st.session_state:
+	# 	st.session_state["countdata"] = pd.DataFrame(columns=['lượt', 'điểm xí ngầu của bạn', 'Điểm xí ngầu đối thủ'])
 	if "countpoint" not in st.session_state:
 		st.session_state["countpoint"] = 0
-
 
 
 	if st.button('lắc'):
@@ -120,25 +121,25 @@ def app():
 		st.markdown(" ")
 		st.markdown(" ")
 
-
-		if number == number1:
-			st.markdown("##### Huề rồi bạn")
-		if number < number1:
-			st.markdown("##### Bạn đã thua")
-
-			
-		if number > number1:
-			st.markdown("##### Bạn đã thắng")
-			if st.session_state.turn < 4:
-				st.session_state.countpoint += 1
-
-		st.markdown("----")
-
-		st.session_state.countdata.loc[st.session_state.turn] = [st.session_state.turn, st.session_state.countpoint]
-		
 		if st.session_state.turn < 4:
-			st.write("Bảng số điểm của bạn sau mỗi lượt")
-			st.dataframe(st.session_state.countdata)
+			if number == number1:
+				st.markdown("##### Huề rồi bạn")
+			if number < number1:
+				st.markdown("##### Bạn đã thua")
+
+				
+			if number > number1:
+				st.markdown("##### Bạn đã thắng")
+				if st.session_state.turn < 4:
+					st.session_state.countpoint += 1
+
+		#st.markdown("----")
+
+		# st.session_state.countdata.loc[st.session_state.turn] = [st.session_state.turn, st.session_state.countpoint]
+		
+
+			#st.write("Bảng số điểm của bạn sau mỗi lượt")
+			#st.dataframe(st.session_state.countdata)
 			st.markdown(" ")
 			st.write("##### Số điểm bạn đang có %s điểm" %(st.session_state.countpoint))
 
