@@ -26,7 +26,7 @@ def app():
 	age = st.slider("Tuổi", 10, 20, 1)
 	school = st.text_input("Hãy nhập tên trường: ")
 	#location = st.selectbox("Hiện em đang số ở", options=["Thành phố HCM", "Tỉnh khác"]
-	location = st.selectbox("Hiện em đang số ở", options=["Thành phố Thủ Đức", 
+	location = st.selectbox("Nơi sinh sống", options=["Thành phố Thủ Đức", 
 	"Quận Bình Tân" , 
 	"Quận 1", 
 	"Quận Bình Thạnh", 
