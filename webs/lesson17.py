@@ -27,7 +27,7 @@ def app():
 
 		- Đây là 1 lục địa
 		
-	- Có Tổng cộng 10 từ
+	- Có tổng cộng 10 kí tự
 
 	- Quanh năm cả châu lục đều phủ lớp băng
 
