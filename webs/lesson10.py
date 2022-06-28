@@ -24,7 +24,7 @@ def app():
 
 	lst1 = ["Màu đỏ", "Màu vàng","Màu cam",  "Màu xanh lá", "Màu xanh dương","Màu chàm","Màu tím"]
 
-	color = st.multiselect("Đồ vật", options= lst1)
+	color = st.multiselect("Màu sắc", options= lst1)
 
 	def stuff2number(stuff):
 		if stuff == "Màu đỏ":
