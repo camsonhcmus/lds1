@@ -18,7 +18,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 14: Xử lý ngoại lệ</center></p>', unsafe_allow_html=True)
 
-	st.write("### Hãy hoàn thành câu hỏi liên quan đến các hình dưới:")
+	st.write("### Hãy hoàn thành câu hỏi của mỗi bức hình:")
 
 	#st.markdown('<center><span style="font-size: 40px"><strong><span class="css-10trblm e16nr0p30">Chúng ta đều bắt đầu học tiểu học ở lớp ...</span></span></center>', unsafe_allow_html=True)
 		
