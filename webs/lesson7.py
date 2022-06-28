@@ -83,7 +83,7 @@ def app():
        
 
 
-	if st.button("Nhập kết quả: "):
+	if st.button("Nhập thông tin: "):
 
 		ti = time.asctime(time.localtime(time.time()))
 		spl_ti = ti.split(" ")
