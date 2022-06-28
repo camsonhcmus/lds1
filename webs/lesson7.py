@@ -92,8 +92,8 @@ def app():
 
 
 		if day==int(spl_ti[2]) and convert(month)==spl_ti[1] and year==int(spl_ti[4]):
-			st.write("Chính xác :smile:")
+			st.write("Cảm ơn bạn đã nhập thông tin chính xác :smile:")
 			st.write("Thời gian hiện tại là: %s, ngày %s tháng %s năm %s" % (convert_day(days), currentdate[2], currentdate[1], currentdate[0]))
 		else:
-			st.write("Bạn nên kiểm tra lại thời gian :cry: vì:")
+			st.write("Thông tin của bạn đã sai :cry: vì:")
 			st.write("Thời gian hiện tại không phải: %s, ngày %s tháng %s năm %s" % (convert_day(calendar.weekday(year, month, day)), day, month, year))
