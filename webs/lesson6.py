@@ -19,7 +19,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 6: String</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 5: String</center></p>', unsafe_allow_html=True)
 
 	st.write('## Hãy nhập một câu và lấy ra nội dung')
 
