@@ -16,7 +16,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 15: Random</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 12: Random</center></p>', unsafe_allow_html=True)
 
 	st.write("## Hãy tham gia trò oẳn tù tì với mình nào")
 
