@@ -19,7 +19,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 7: Datetime</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 6: Datetime</center></p>', unsafe_allow_html=True)
 
 	st.write("## Hãy chọn ngày sinh nhật")
 
