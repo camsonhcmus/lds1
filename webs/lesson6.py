@@ -27,10 +27,10 @@ def app():
 	
 
 	word = st.text_input("Hãy nhập câu rồi nhấn enter: ", value=" ")
-	ran = st.slider("chọn khoảng muốn nói", 0, len(word), (0, len(word)))
+	ran = st.slider("Nội dung nằm ở khoảng:", 0, len(word), (0, len(word)))
 
 
-	if st.button("Chọn thứ muốn nói"):
+	if st.button("Hiện nội dung: "):
 
 
 		word1 = word[ran[0]:ran[1]]
