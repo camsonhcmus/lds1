@@ -24,11 +24,11 @@ def app():
 
 	st.write("""### Luật chơi sẽ như sau:
 
-		- Trong vòng 3 lượt, bạn giành được chiến thắng nếu đoán trúng hơn 2 lần
+		- Bạn có 3 lượt chơi
 
-	- Nếu bạn đoán trúng dưới 2 lượt bạn sẽ thua
+	- Trong vòng 3 lượt, bạn đoán trúng thì bạn sẽ chiến thắng 
 
-	- Sau khi hết lượt bạn phải bắm nút "Chơi lại"
+	- Nếu như 3 lượt đoán không trúng thì nhấn bắm nút "Chơi lại"
 
 		""")
 
@@ -111,6 +111,7 @@ def app():
 		st.write("##### Bạn đã thua cuộc")
 	elif st.session_state.point1 >= 1:
 		st.write("##### Bạn đã thắng")
+		st.write("##### Nếu như bạn muốn chơi nữa thì hãy bấm nút chơi lại")
 
 	elif st.session_state.point1 == 0:
 		st.write("##### Bạn đã thua")
