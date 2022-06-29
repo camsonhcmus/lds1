@@ -17,7 +17,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 16: Dictionary (mở rộng)</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 13: Dictionary (mở rộng)</center></p>', unsafe_allow_html=True)
 
 	st.write("### Hãy giúp mình xắp xếp lịch học hè (1 ngày 5 môn ):")
 
