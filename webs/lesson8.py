@@ -17,7 +17,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 8: List</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 9: List</center></p>', unsafe_allow_html=True)
 
 	st.write("## Hãy tạo menu cho nhà hàng")
 
