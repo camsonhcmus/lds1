@@ -93,8 +93,8 @@ st.markdown(hide_menu_style, unsafe_allow_html = True)
 
 
 with st.sidebar:
-    selected = option_menu("LDS 1", ['Tổng Quan', 'Bài 1', 'Bài 2', 'Bài 3', 'Bài 4', 'Bài 5', 'Bài 6', 'Bài 7', 'Bài 8', 'Bài 9', 'Bài 10', 'Bài 11', 'Bài 12', 'Bài 13', 'Bài 14', 'Bài 15', 'Bài 16', 'Bài 17'], 
-        icons=['book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book'], menu_icon="code-slash", default_index=0)
+    selected = option_menu("LDS 1", ['Tổng Quan', 'Bài 1', 'Bài 2', 'Bài 3', 'Bài 4', 'Bài 5', 'Bài 6', 'Bài 7', 'Bài 8', 'Bài 9', 'Bài 10', 'Bài 11', 'Bài 12', 'Bài 13', 'Bài 14', 'Bài 15', 'Bài 16'], 
+        icons=['book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book'], menu_icon="code-slash", default_index=0)
 
 if selected == "Tổng Quan":
 	overview.app()
