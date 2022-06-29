@@ -39,41 +39,55 @@ def app():
 	if "point1" not in st.session_state:
 		st.session_state["point1"] = 0
 
-	if st.button("Dự đoán: "):
-		st.session_state.turn1 += 1
-		st.write("##### Bạn đang chơi lượt thứ %s" %(st.session_state.turn1))
-		try:
-			pre_num = int(pre_num)
+	# st.markdown(
+	# """ <button kind="primary" class="css-8k1y1z edgvbvh9">Dự đoán: </button>
+	# 	""",
+	# unsafe_allow_html=True
+	# )
 
-		except:
-			st.error("Hãy nhập số bạn nhé :smile:")
 
-		number_test = random.randint(1,5 )
 
-		# if st.session_state.turn1 < 4 and pre_num != number_test:
-				
-		# 	if pre_num <= number_test:
-		# 		st.write("Sai :cry: con số bạn nhỏ hơn con số may mắn")
-				
-		# 	elif pre_num >= number_test:
-		# 		st.write("Sai :cry: con số bạn lớn hơn con số may mắn")
+	number_test = random.randint(1,5 )
 
-		# elif st.session_state.turn1 < 4 and pre_num == number_test:
+	if st.session_state.turn1 < 3 and st.session_state.point1 == 0:
 
-		# 	st.write("Chính xác :tada:")
-		# 	st.balloons()
-		# 	st.write('Bạn đã thắng rồi hãy bắm nút "Chơi lại" nếu như bạn muốn chơi lại')
+		if st.button("Dự đoán: "):
+			st.session_state.turn1 += 1
+			st.write("##### Bạn đang chơi lượt thứ %s" %(st.session_state.turn1))
 
-		# elif pre_num == number_test:
-		# 	st.write('Bạn đã thắng rồi hãy bắm nút "Chơi lại" nếu như bạn muốn chơi lại')
+			try:
+				pre_num = int(pre_num)
 
-		# elif st.session_state.turn1 >= 4 and pre_num != number_test: 
-		# 	st.write('Bạn đã hết lượt hãy bắm nút "Chơi lại" nếu như bạn muốn thử vận may nữa')
+			except:
+				st.error("Hãy nhập số bạn nhé")
 
-		# elif st.session_state.turn1 >= 4 and pre_num == number_test: 
-		# 	st.write('Bạn đã hết lượt hãy bắm nút "Chơi lại" nếu như bạn muốn thử vận may nữa')
 
-		if st.session_state.turn1 < 4:
+			
+
+			# if st.session_state.turn1 < 4 and pre_num != number_test:
+					
+			# 	if pre_num <= number_test:
+			# 		st.write("Sai :cry: con số bạn nhỏ hơn con số may mắn")
+					
+			# 	elif pre_num >= number_test:
+			# 		st.write("Sai :cry: con số bạn lớn hơn con số may mắn")
+
+			# elif st.session_state.turn1 < 4 and pre_num == number_test:
+
+			# 	st.write("Chính xác :tada:")
+			# 	st.balloons()
+			# 	st.write('Bạn đã thắng rồi hãy bắm nút "Chơi lại" nếu như bạn muốn chơi lại')
+
+			# elif pre_num == number_test:
+			# 	st.write('Bạn đã thắng rồi hãy bắm nút "Chơi lại" nếu như bạn muốn chơi lại')
+
+			# elif st.session_state.turn1 >= 4 and pre_num != number_test: 
+			# 	st.write('Bạn đã hết lượt hãy bắm nút "Chơi lại" nếu như bạn muốn thử vận may nữa')
+
+			# elif st.session_state.turn1 >= 4 and pre_num == number_test: 
+			# 	st.write('Bạn đã hết lượt hãy bắm nút "Chơi lại" nếu như bạn muốn thử vận may nữa')
+
+
 			if pre_num == number_test:
 				st.write("Chính xác :tada:")
 				st.balloons()
@@ -81,17 +95,27 @@ def app():
 
 			elif pre_num <= number_test:
 				st.write("Sai :cry: con số bạn nhỏ hơn con số may mắn")
-				
+					
 			elif pre_num >= number_test:
 				st.write("Sai :cry: con số bạn lớn hơn con số may mắn")
 			st.write("##### Số lần bạn đoán trúng là: %s lần" %(st.session_state.point1))
 
-		elif st.session_state.turn1 >= 4:
-			if st.session_state.point1 >= 2:
-				st.write("##### Bạn đã thắng cuộc")
-			else:
-				st.write("##### Bạn đã thua cuộc")
-			st.write("##### Tổng số lần bạn đã đoán trúng là %s lần" %(st.session_state.point1))
+	elif st.session_state.turn1 < 3 and st.session_state.point1 >= 1:
+		st.write("##### Bạn đã thắng cuộc")
+	elif st.session_state.turn1 > 3 and st.session_state.point1 >= 1:
+
+		st.write("##### Bạn đã thắng cuộc")
+
+	elif st.session_state.turn1 > 3 and st.session_state.point1 == 0:
+
+		st.write("##### Bạn đã thua cuộc")
+	elif st.session_state.point1 >= 1:
+		st.write("##### Bạn đã thắng")
+
+	elif st.session_state.point1 == 0:
+		st.write("##### Bạn đã thua")
+
+
 
 
 
@@ -102,4 +126,5 @@ def app():
 		for key in st.session_state.keys():
 			del st.session_state[key]
 
-		st.session_state.turn1 = 0
+			st.session_state.turn1 = 0
+			st.session_state.point1 = 0
