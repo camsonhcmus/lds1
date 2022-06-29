@@ -93,8 +93,8 @@ st.markdown(hide_menu_style, unsafe_allow_html = True)
 
 
 with st.sidebar:
-    selected = option_menu("LDS 1", ['Tổng Quan', 'Bài 1', 'Bài 2', 'Bài 3', 'Bài 4', 'Bài 5', 'Bài 6', 'Bài 7', 'Bài 8', 'Bài 9', 'Bài 10', 'Bài 11', 'Bài 12', 'Bài 13', 'Bài 14', 'Bài 15', 'Bài 16', 'Bài 17', 'Bài 18'], 
-        icons=['book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book'], menu_icon="code-slash", default_index=0)
+    selected = option_menu("LDS 1", ['Tổng Quan', 'Bài 1', 'Bài 2', 'Bài 3', 'Bài 4', 'Bài 5', 'Bài 6', 'Bài 7', 'Bài 8', 'Bài 9', 'Bài 10', 'Bài 11', 'Bài 12', 'Bài 13', 'Bài 14', 'Bài 15', 'Bài 16', 'Bài 17'], 
+        icons=['book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book', 'book'], menu_icon="code-slash", default_index=0)
 
 if selected == "Tổng Quan":
 	overview.app()
@@ -112,43 +112,43 @@ if selected == "Bài 4":
    	lesson4.app()
 
 if selected == "Bài 5":
-   	lesson5.app()
-
-if selected == "Bài 6":
    	lesson6.app()
 
-if selected == "Bài 7":
+if selected == "Bài 6":
    	lesson7.app()
 
-if selected == "Bài 8":
+if selected == "Bài 7":
    	lesson8.app()
 
-if selected == "Bài 9":
+if selected == "Bài 8":
    	lesson9.app()
 
+if selected == "Bài 9":
+   	lesson10.app()
+
 if selected == "Bài 10":
-   	lesson10.app()   
+   	lesson11.app()   
 
 if selected == "Bài 11":
-   	lesson11.app()  
+   	lesson12.app()  
 
 if selected == "Bài 12":
-   	lesson12.app()
+   	lesson13.app()
 
 if selected == "Bài 13":
-   	lesson13.app()   
+   	lesson14.app()   
 
 if selected == "Bài 14":
-   	lesson14.app()  
-
-if selected == "Bài 15":
    	lesson15.app()  
 
-if selected == "Bài 16":
-   	lesson16.app() 
+if selected == "Bài 15":
+   	lesson16.app()  
 
-if selected == "Bài 17":
+if selected == "Bài 16":
    	lesson17.app() 
 
-if selected == "Bài 18":
+if selected == "Bài 17":
    	lesson18.app() 
+
+# if selected == "Bài 18":
+#    	lesson18.app() 
