@@ -16,7 +16,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 13: Random</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 10: Random</center></p>', unsafe_allow_html=True)
 
 	st.markdown('### Hãy phối đồ dựa trên tủ áo đang có')
 
