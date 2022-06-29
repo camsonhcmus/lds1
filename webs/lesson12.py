@@ -18,7 +18,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 12: Function</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 9: Function</center></p>', unsafe_allow_html=True)
 
 	st.markdown("## Chào mừng bạn đến cuộc chơi xí ngầu")
 
