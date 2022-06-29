@@ -16,7 +16,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 10: Set</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 7: Set</center></p>', unsafe_allow_html=True)
 
 	st.write("## Mình sẽ giúp bạn xắp xếp các màu bạn chọn theo thứ tự của cầu vòng")
 
