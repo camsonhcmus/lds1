@@ -17,7 +17,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 17: List (mở rộng)</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 14: List (mở rộng)</center></p>', unsafe_allow_html=True)
 
 	st.markdown("## Chào mừng bạn đến cuộc chơi đoán từ tiếng anh")
 
