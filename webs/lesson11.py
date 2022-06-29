@@ -16,7 +16,7 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 11: Dictionary</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 8: Dictionary</center></p>', unsafe_allow_html=True)
 
 	#st.markdown('''<img src='./picture/soccer.png' height="180px" width="500px" />''', unsafe_allow_html=True)
 	st.markdown(" ")
