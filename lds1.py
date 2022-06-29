@@ -120,34 +120,34 @@ if selected == "Bài 6":
 if selected == "Bài 7":
    	lesson8.app()
 
-if selected == "Bài 8":
-   	lesson9.app()
+# if selected == "Bài 8":
+#    	lesson9.app()
 
-if selected == "Bài 9":
+if selected == "Bài 8":
    	lesson10.app()
 
-if selected == "Bài 10":
+if selected == "Bài 9":
    	lesson11.app()   
 
-if selected == "Bài 11":
+if selected == "Bài 10":
    	lesson12.app()  
 
-if selected == "Bài 12":
+if selected == "Bài 11":
    	lesson13.app()
 
-if selected == "Bài 13":
+if selected == "Bài 12":
    	lesson14.app()   
 
-if selected == "Bài 14":
+if selected == "Bài 13":
    	lesson15.app()  
 
-if selected == "Bài 15":
+if selected == "Bài 14":
    	lesson16.app()  
 
-if selected == "Bài 16":
+if selected == "Bài 15":
    	lesson17.app() 
 
-if selected == "Bài 17":
+if selected == "Bài 16":
    	lesson18.app() 
 
 # if selected == "Bài 18":
