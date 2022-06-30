@@ -85,35 +85,6 @@ def app():
 	st.write("## Hãy xắp xếp hình trên vào thứ tự trong khung để hoàn thiện")
 	st.image(Image.open('./picture/frame.PNG'), width=400)
 
-	a = components.html(
-	"""
-	<script>
-	document.getElementById(generate).onclick = function() {
- 
-		var values = ["dog", "cat", "parrot", "rabbit"];
- 
-		var select = document.createElement(select);
-		select.name = "pets";
-		select.id = "pets"
- 
-		for (const val of values)
-		{
-			var option = document.createElement(option);
-			option.value = val;
-			option.text = val.charAt(0).toUpperCase() + val.slice(1);
-			select.appendChild(option);
-    	}
- 
-		var label = document.createElement(label);
-		label.innerHTML = "Choose your pets: "
-		label.htmlFor = "pets";
- 
-		document.getElementById(container).appendChild(label).appendChild(select);
-	}
-	</script>
-	""",height=0,
-	)
-
 	
 
 	selection = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
