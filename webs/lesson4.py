@@ -17,11 +17,11 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 4: Cấu trúc lặp</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Bảng cửu chương với số bạn chọn")
+	st.markdown("## Hiển thị bảng cửu chương")
 
 	st.image(Image.open('./picture/mul.jpg'), width=500)
 
-	inp = st.text_input("Nhập số bạn muốn: ")
+	inp = st.text_input("Bạn muốn hiển thị bảng cửu chương số mấy: ")
 
 	if st.button("Kết quả"):
 		try:
