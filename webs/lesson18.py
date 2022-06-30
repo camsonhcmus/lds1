@@ -20,7 +20,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 15: List (mở rộng)</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Hãy xắp xếp hình theo hình mẫu")
+	st.markdown("## Hãy sắp xếp hình theo hình mẫu")
 	st.image(Image.open('./picture/van.jpg'), width=800)
 	
 	st.write("### Hình cần sắp xếp: ")
