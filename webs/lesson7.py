@@ -21,7 +21,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 6: Datetime</center></p>', unsafe_allow_html=True)
 
-	st.write("## Hãy chọn ngày sinh nhật")
+	st.write("## Hãy nhập ngày sinh nhật")
 
 	st.image(Image.open('./picture/cake.jpg'), width=400)
 
