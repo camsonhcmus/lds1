@@ -288,9 +288,9 @@ def app():
 				st.write("----")
 				st.write("""##### Thông tin tranh vẽ
 		Tên: Fields near the Alpilles
-		Tác giả: Vincent van Gogh’s
-		Năm: 1889
-		Địa điểm: Pháp""")
+	Tác giả: Vincent van Gogh’s
+	Năm: 1889
+	Địa điểm: Pháp""")
 
 			else:
 				st.write("#### Bạn sai rồi hãy xắp xếp lại nhé :cry:")
