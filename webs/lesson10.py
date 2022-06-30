@@ -18,10 +18,12 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 7: Set</center></p>', unsafe_allow_html=True)
 
-	st.write("## Mình sẽ giúp bạn sắp xếp các màu bạn chọn theo thứ tự của cầu vòng")
+
 
 	st.image(Image.open('./picture/rainbow.jpg'), width=800)
 
+	st.write("## Bạn sẽ chọn các màu sắc và mình sẽ giúp bạn sắp xếp theo thứ tự màu cầu vòng")	
+	
 	lst1 = ["Màu đỏ", "Màu vàng","Màu cam",  "Màu xanh lá", "Màu xanh dương","Màu chàm","Màu tím"]
 
 	color = st.multiselect("Màu sắc", options= lst1)
