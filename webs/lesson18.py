@@ -20,7 +20,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 15: List (mở rộng)</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Hãy sắp xếp hình theo hình mẫu")
+	st.markdown("## Hãy sắp xếp hình theo bức tranh mẫu")
 	st.image(Image.open('./picture/van.jpg'), width=800)
 	
 	st.write("### Hình cần sắp xếp: ")
@@ -84,7 +84,7 @@ def app():
 
 	lsta =["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 
-	st.write("## Hãy sắp xếp hình trên vào thứ tự trong khung để hoàn thiện")
+	st.write("## Hãy sắp xếp hình trên vào thứ tự trong khung để hoàn thiện bức tranh")
 	st.image(Image.open('./picture/frame.PNG'), width=400)
 
 	st.write("* Chú ý")
