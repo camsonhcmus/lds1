@@ -19,7 +19,7 @@ def app():
 
 	st.markdown("## Hiển thị bảng cửu chương")
 
-	st.image(Image.open('./picture/mul.jpg'), width=500)
+	st.image(Image.open('./picture/multable.jpg'), width=500)
 
 	inp = st.text_input("Bạn muốn hiển thị bảng cửu chương số mấy: ")
 
