@@ -20,7 +20,7 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 9: Function</center></p>', unsafe_allow_html=True)
 
-	st.markdown("## Chào mừng bạn đến cuộc chơi xí ngầu")
+	st.markdown("## Chào mừng bạn đến trò chơi lắc xí ngầu")
 
 	st.image(Image.open('./picture/pairdice.jpg'), width=500)
 
