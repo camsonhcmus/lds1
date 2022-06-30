@@ -23,7 +23,7 @@ def app():
 
 	inp = st.text_input("Bạn muốn hiển thị bảng cửu chương số mấy: ")
 
-	if st.button("Kết quả"):
+	if st.button("In bảng cửu chương"):
 		try:
 			for i in range (1, 10):
 				inp = int(inp)
