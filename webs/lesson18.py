@@ -114,80 +114,84 @@ def app():
 
 
 	if st.button("Xem kết quả: "):
+		try:
 
-		if selection == ["h", "i", "g", "c", "d", "a", "e", "f", "b"]:
-			st.write("#### Chính xác chúc mừng bạn :tada:")
+			if selection == ["h", "i", "g", "c", "d", "a", "e", "f", "b"]:
+				st.write("#### Chính xác chúc mừng bạn :tada:")
 
-			col5, col6, col7, col8, col9, col10 = st.columns(6)
-
-
-
-			with col5:
+				col5, col6, col7, col8, col9, col10 = st.columns(6)
 
 
-				pic1 = st.image(Image.open('./picture/van.jpg').crop((0, 0, onethid_imw, onethid_height)), width=200)  
 
-				pic4 = st.image(Image.open('./picture/van.jpg').crop((0, onethid_height, onethid_imw, onethid_height*2)), width=200)
-			
-				pic7 = st.image(Image.open('./picture/van.jpg').crop((0, onethid_height*2, onethid_imw, onethid_height*3)), width=200)
+				with col5:
 
 
-			with col6:
+					pic1 = st.image(Image.open('./picture/van.jpg').crop((0, 0, onethid_imw, onethid_height)), width=250)  
 
-				pic2 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, 0, onethid_imw*2, onethid_height)), width=200)
+					pic4 = st.image(Image.open('./picture/van.jpg').crop((0, onethid_height, onethid_imw, onethid_height*2)), width=250)
+				
+					pic7 = st.image(Image.open('./picture/van.jpg').crop((0, onethid_height*2, onethid_imw, onethid_height*3)), width=250)
 
-				pic5 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height, onethid_imw*2, onethid_height*2)), width=200)
-				pic8 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height*2, onethid_imw*2, onethid_height*3)), width=200)
+
+				with col6:
+
+					pic2 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, 0, onethid_imw*2, onethid_height)), width=250)
+
+					pic5 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height, onethid_imw*2, onethid_height*2)), width=250)
+					pic8 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height*2, onethid_imw*2, onethid_height*3)), width=250)
 
 
-			with col7:
-				pic3 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, 0, onethid_imw*3, onethid_height)), width=200)
+				with col7:
+					pic3 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, 0, onethid_imw*3, onethid_height)), width=250)
 
-				pic6 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height, onethid_imw*3, onethid_height*2)), width=200)
+					pic6 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height, onethid_imw*3, onethid_height*2)), width=250)
 
-				pic9 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height*2, onethid_imw*3, onethid_height*3)), width=200)
+					pic9 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height*2, onethid_imw*3, onethid_height*3)), width=250)
 
-			with col8:
-				pass
-			with col9:
-				pass
+				with col8:
+					pass
+				with col9:
+					pass
 
-			with col10:
-				pass
-			st.write("----")
-			st.write("#### Bức ảnh hoàn thiện ")
-			st.image(Image.open('./picture/van.jpg'), width=800)
-			st.write("""##### Thông tin tranh vẽ
-				Tên: Fields near the Alpilles
-	Tác giả: Vincent van Gogh’s
-	Năm: 1889
-	Địa điểm: Pháp""")
+				with col10:
+					pass
+				st.write("----")
+				st.write("#### Bức ảnh hoàn thiện ")
+				st.image(Image.open('./picture/van.jpg'), width=800)
+				st.write("""##### Thông tin tranh vẽ
+					Tên: Fields near the Alpilles
+		Tác giả: Vincent van Gogh’s
+		Năm: 1889
+		Địa điểm: Pháp""")
 
-		else:
-			st.write("#### Bạn sai rồi hãy xắp xếp lại nhé :cry:")
-			
-		
-			col11, col12, col13, col14, col15 = st.columns(5)
+			else:
+				st.write("#### Bạn sai rồi hãy xắp xếp lại nhé :cry:")
 
-			with col11:
-				st.image(convert(selection[0]), width=250)
-				st.image(convert(selection[3]), width=250)
-				st.image(convert(selection[6]), width=250)
+				col11, col12, col13, col14, col15 = st.columns(5)
 
-			with col12:
-				st.image(convert(selection[1]), width=250)
-				st.image(convert(selection[4]), width=250)
-				st.image(convert(selection[7]), width=250)
+				with col11:
+					st.image(convert(selection[0]), width=250)
+					st.image(convert(selection[3]), width=250)
+					st.image(convert(selection[6]), width=250)
 
-			with col13:
-				st.image(convert(selection[2]), width=250)
-				st.image(convert(selection[5]), width=250)
-				st.image(convert(selection[8]), width=250)
-			with col14:
-				pass
+				with col12:
+					st.image(convert(selection[1]), width=250)
+					st.image(convert(selection[4]), width=250)
+					st.image(convert(selection[7]), width=250)
 
-			with col15:
-				pass
+				with col13:
+					st.image(convert(selection[2]), width=250)
+					st.image(convert(selection[5]), width=250)
+					st.image(convert(selection[8]), width=250)
+				with col14:
+					pass
+
+				with col15:
+					pass
+
+		except:
+			pass
+
 
 
 
