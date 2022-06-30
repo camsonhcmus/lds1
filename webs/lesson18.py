@@ -81,6 +81,37 @@ def app():
 	st.write("## Hãy xắp xếp hình trên vào thứ tự trong khung để hoàn thiện")
 	st.image(Image.open('./picture/frame.PNG'), width=400)
 	selection = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	
+	def convert(letter):
+		if letter == "a":
+			return Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height, onethid_imw*3, onethid_height*2))
+
+		if letter == "d":
+			return Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height, onethid_imw*2, onethid_height*2))
+
+		if letter == "g":
+			return Image.open('./picture/van.jpg').crop((onethid_imw*2, 0, onethid_imw*3, onethid_height))
+
+		if letter == "b":
+			return Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height*2, onethid_imw*3, onethid_height*3))
+
+		if letter == "e":
+			return Image.open('./picture/van.jpg').crop((0, onethid_height*2, onethid_imw, onethid_height*3))
+
+		if letter == "h":
+			return Image.open('./picture/van.jpg').crop((0, 0, onethid_imw, onethid_height))
+	
+		if letter == "c":
+			return Image.open('./picture/van.jpg').crop((0, onethid_height, onethid_imw, onethid_height*2))
+
+		
+		if letter == "f":
+			return Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height*2, onethid_imw*2, onethid_height*3))
+
+		
+		if letter == "i":
+			return Image.open('./picture/van.jpg').crop((onethid_imw, 0, onethid_imw*2, onethid_height))
+
 
 	if st.button("Xem kết quả: "):
 
@@ -134,6 +165,29 @@ def app():
 
 		else:
 			st.write("#### Bạn sai rồi hãy xắp xếp lại nhé :cry:")
+			
+		
+			col11, col12, col13, col14, col15 = st.columns(5)
+
+			with col11:
+				st.image(convert(selection[0]), width=250)
+				st.image(convert(selection[3]), width=250)
+				st.image(convert(selection[6]), width=250)
+
+			with col12:
+				st.image(convert(selection[1]), width=250)
+				st.image(convert(selection[4]), width=250)
+				st.image(convert(selection[7]), width=250)
+
+			with col13:
+				st.image(convert(selection[2]), width=250)
+				st.image(convert(selection[5]), width=250)
+				st.image(convert(selection[8]), width=250)
+			with col14:
+				pass
+
+			with col15:
+				pass
 
 
 
