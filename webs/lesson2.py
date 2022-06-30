@@ -34,15 +34,15 @@ def app():
 	#	state.game_number += 1
 	#	state.game_over = False
 
-	st.markdown("## Với các con số từ 1 đến 50, hãy tìm con số chia hết cho số được nhập")
+	st.markdown("## Hãy tìm các số từ 1 đến 50 chia hết cho số được nhập")
 
 	st.image(Image.open('./picture/phepchia.jpg'), width=500)
 
-	inpd = st.text_input("Hãy nhập con số chia: ")
+	inpd = st.text_input("Vui lầm nhập số chia: ")
 
 	if st.button("Thực hiện phép chia"):
 		try:
-			st.write("Những số chia hết là:")
+			st.write("Những số chia hết cho %s:" %(inpd))
 			for i in range (1, 51):
 				inpd = int(inpd)
 				resultd = i / inpd
