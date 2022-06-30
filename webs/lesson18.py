@@ -85,8 +85,9 @@ def app():
 	lsta =["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 
 	st.write("## Hãy sắp xếp hình trên vào thứ tự trong khung để hoàn thiện bức tranh")
+	st.markdown(" ")
 	st.image(Image.open('./picture/frame.PNG'), width=400)
-
+	st.markdown(" ")
 	st.write("* Chú ý")
 	st.write("Thứ tự bạn chọn bên dưới sẽ tương úng với các số thứ tự trên khung")
 	selection = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
