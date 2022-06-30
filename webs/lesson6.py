@@ -21,19 +21,55 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 5: String</center></p>', unsafe_allow_html=True)
 
-	st.write('## Hãy nhập một câu và lấy ra nội dung')
-
 	st.image(Image.open('./picture/talk.jpg'), width=500)
-	
-
-	word = st.text_input("Hãy nhập câu rồi nhấn enter: ", value=" ")
-	ran = st.slider("Khoảng nội dung mà bạn muốn lấy ra:", 0, len(word), (0, len(word)))
-	#ran = st.slider("Nội dung nằm ở khoảng:", 0, len(word), (0, len(word)))
 
 
-	if st.button("Hiện nội dung: "):
+	st.write('## Hãy tìm từ tiếng anh xuất hiện trong câu sau:')
+
+	sen = st.write("Hôm qua, tôi chơi game cả ngày.")
+
+	word = "hôm qua, tôi chơi video game cả ngày"
+
+	# ran = st.slider("Nội dung nằm ở khoảng:", 0, len(word), (0, len(word)))
+
+	st.markdown(
+	""" <style>
+			div[role="radiogroup"] >  :first-child{
+				display: none !important;
+			}
+		</style>
+		""",
+	unsafe_allow_html=True
+	)
+
+	def convert(num):
+		if num == 1:
+			return "hôm"
+
+		elif num == 2:
+			return "qua"
+
+		elif num == 3:
+			return "tôi"
 
 
-		word1 = word[ran[0]:ran[1]]
+		elif num == 4:
+			return "chơi"
 
-		st.write(word1)	
+		elif num == 6:
+			return "cả"
+
+		elif num == 7:
+			return "ngày"
+
+	posi = st.radio("Vị trí của từ tiếng anh:", options=["None", 1, 2, 3, 4, 5, 6, 7], horizontal=True)
+
+	if posi == 5:
+		st.write("Chúc mừng bạn đã có sự lựa chọn chính xác")
+
+	elif posi == "None":
+		pass
+
+	else:
+		st.write('Sai, từ " %s " không phải là từ tiếng anh' % (convert(posi)))
+
