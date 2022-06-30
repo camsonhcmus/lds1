@@ -24,7 +24,7 @@ def app():
 	st.image(Image.open('./picture/talk.jpg'), width=500)
 
 
-	st.write('## Hãy tìm từ tiếng anh xuất hiện trong câu sau:')
+	st.write('## Hãy tìm từ tiếng Anh xuất hiện trong câu sau:')
 
 	sen = st.write("Hôm qua, tôi chơi game cả ngày.")
 
@@ -62,7 +62,7 @@ def app():
 		elif num == 7:
 			return "ngày"
 
-	posi = st.radio("Vị trí của từ tiếng anh:", options=["None", 1, 2, 3, 4, 5, 6, 7], horizontal=True)
+	posi = st.radio("Từ tiếng Anh xuất hiện tại vị trí:", options=["None", 1, 2, 3, 4, 5, 6, 7], horizontal=True)
 
 	if posi == 5:
 		st.write("Chúc mừng bạn đã có sự lựa chọn chính xác")
@@ -71,5 +71,5 @@ def app():
 		pass
 
 	else:
-		st.write('Sai, từ " %s " không phải là từ tiếng anh' % (convert(posi)))
+		st.write('Sai, từ " %s " không phải là từ tiếng Anh' % (convert(posi)))
 
