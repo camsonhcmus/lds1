@@ -111,7 +111,7 @@ def app():
 		document.getElementById(container).appendChild(label).appendChild(select);
 	}
 	</script>
-	""",height=600,
+	""",height=0,
 	)
 
 	
