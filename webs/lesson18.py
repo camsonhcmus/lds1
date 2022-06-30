@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import random
 import pandas as pd
+import streamlit.components.v1 as components
 
 def app():
 	image = Image.open('./picture/khtn.PNG')
@@ -17,13 +18,15 @@ def app():
 	</style>
 	""", unsafe_allow_html=True)
 
-	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 15: List (mở rộng)</center></p>', unsafe_allow_html=True)
+	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 18: List (mở rộng)</center></p>', unsafe_allow_html=True)
 
 	st.markdown("## Hãy xắp xếp hình theo hình mẫu")
-	st.image(Image.open('./picture/van.jpg'), width=800)
-	
 	st.write("### Hình cần xắp xếp: ")
 	col1, col2, col3, col4 = st.columns(4)
+
+	st.markdown('''''', unsafe_allow_html=True)
+
+
 
 	# left = 5
 	# top = height / 4
@@ -77,11 +80,165 @@ def app():
 	with col4:				
 		pass
 
+	lsta =["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 
 	st.write("## Hãy xắp xếp hình trên vào thứ tự trong khung để hoàn thiện")
 	st.image(Image.open('./picture/frame.PNG'), width=400)
+
+	a = components.html(
+	"""
+	<script>
+	document.getElementById(generate).onclick = function() {
+ 
+		var values = ["dog", "cat", "parrot", "rabbit"];
+ 
+		var select = document.createElement(select);
+		select.name = "pets";
+		select.id = "pets"
+ 
+		for (const val of values)
+		{
+			var option = document.createElement(option);
+			option.value = val;
+			option.text = val.charAt(0).toUpperCase() + val.slice(1);
+			select.appendChild(option);
+    	}
+ 
+		var label = document.createElement(label);
+		label.innerHTML = "Choose your pets: "
+		label.htmlFor = "pets";
+ 
+		document.getElementById(container).appendChild(label).appendChild(select);
+	}
+	</script>
+	""",height=600,
+	)
+
+	
+
 	selection = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
 	
+
+	# col17, col18, col19, col20, col21, col22 = st.columns(6)
+	# with col17:
+	# 	st.write("##### Vị trí thứ nhất: ")
+	# 	po1 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po1) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po1))
+	# 	elif len(po1) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+		
+	# 	st.write("##### Vị trí thứ bốn: ")
+	# 	po4 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po4) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po4))
+	# 	elif len(po4) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+
+	# 	st.write("##### Vị trí thứ bảy: ")
+	# 	po7 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po7) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po7))
+	# 	elif len(po7) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+
+	# with col18:
+	# 	st.write("##### Vị trí thứ hai: ")
+	# 	po2 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po2) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po2))
+	# 	elif len(po2) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+		
+	# 	st.write("##### Vị trí thứ năm: ")
+	# 	po5 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po5) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po5))
+	# 	elif len(po5) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+
+	# 	st.write("##### Vị trí thứ tám: ")
+
+	# 	po8 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po8) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po8))
+	# 	elif len(po8) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+
+	# with col17:
+	# 	st.write("##### Vị trí thứ ba: ")
+	# 	po3 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po3) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po3))
+	# 	elif len(po3) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+		
+	# 	st.write("##### Vị trí thứ sáu: ")
+	# 	po6 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po6) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po6))
+	# 	elif len(po6) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+
+	# 	st.write("##### Vị trí thứ chín: ")
+
+	# 	po9 = st.multiselect(" ", options=["a", "b", "c", "d", "e", "f", "g", "h", "i"])
+	# 	if len(po9) == 1:
+	# 		st.write("bạn đã chọn %s, hãy chọn 1 hình khác ở vị trí khác" %(po9))
+	# 	elif len(po9) > 1:
+	# 		st.write("chỉ chọn 1 hình thôi bạn")
+	# 	else:
+	# 		st.write("chọn 1 hình đi bạn")
+
+	# with col17:
+	# 	pass
+	# with col17:
+	# 	pass
+			#background-color: #2196F3;
+
+	a = components.html(
+	"""
+		<style>
+		.grid-container {
+		display: grid;
+		grid-template-columns: 350px 350px 350px;
+		grid-template-rows: 300px 300px 300px;
+		column-gap:0px;
+		padding: 10px;
+
+			}
+
+		.grid-item {
+			background-color: rgba(255, 255, 255, 1);
+			border: 0px solid rgba(0, 0, 0, 0);
+			padding: 10px;
+			font-size: 10px;
+			text-align: center;
+			}
+			</style>
+
+			<div class="grid-container">
+
+
+	""",height=0,
+	)
+
 	def convert(letter):
 		if letter == "a":
 			return Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height, onethid_imw*3, onethid_height*2))
@@ -112,6 +269,37 @@ def app():
 		if letter == "i":
 			return Image.open('./picture/van.jpg').crop((onethid_imw, 0, onethid_imw*2, onethid_height))
 
+	def convert_link(letter):
+
+		
+		if letter == "a":
+			return "http://lds1.herokuapp.com/media/37068b419a9ce8eb9757b200346a5d62df4ed2b6a57b9f2cf601da48.jpeg"
+
+		if letter == "d":
+			return "http://lds1.herokuapp.com/media/4822feab6575154f88e77c728a8ed04af3cb9cba1e71e915ccf50be6.jpeg"
+
+		if letter == "g":
+			return "http://lds1.herokuapp.com/media/c7270549e24c7d5efb3f78dde00afe2b9b416f4bc48d22d135a92cf9.jpeg"
+
+		if letter == "b":
+			return "http://lds1.herokuapp.com/media/0c8c84e1de46757a427e77439f1a3e945e9dc74629a082d2e150cc48.jpeg"
+
+		if letter == "e":
+			return "http://lds1.herokuapp.com/media/e06ea8ff20461e27a8c01ec295749c0cfdceb395cde2cfbe58826b2b.jpeg"
+
+		if letter == "h":
+			return "http://lds1.herokuapp.com/media/23dccc106aac9e0629f421b9b8965eb1ae0ce145dd6fd2b177112f85.jpeg"
+				
+		if letter == "c":
+			return "http://lds1.herokuapp.com/media/3df669d60a16a571bed787c03092d2bbf02b590c7e30242b79539934.jpeg"
+
+					
+		if letter == "f":
+			return "http://lds1.herokuapp.com/media/60e44e072372a701f1dd3b70847b5e7e1003ee03bb92f6376b31ab34.jpeg"
+
+					
+		if letter == "i":
+			return "http://lds1.herokuapp.com/media/0b6db80630c154f5b3ef242087afc0cd65e8edc7bbe74dd424b07212.jpeg"
 
 	if st.button("Xem kết quả: "):
 		try:
@@ -119,42 +307,11 @@ def app():
 			if selection == ["h", "i", "g", "c", "d", "a", "e", "f", "b"]:
 				st.write("#### Chính xác chúc mừng bạn :tada:")
 
-				col5, col6, col7, col8, col9, col10 = st.columns(6)
 
+				st.markdown('<div class="grid-item"><img src="'+convert_link(selection[0])+'"><img src="'+convert_link(selection[1])+'"><img src="'+convert_link(selection[2])+'"></div>', unsafe_allow_html=True)
+				st.markdown('<div class="grid-item"><img src="'+convert_link(selection[3])+'"><img src="'+convert_link(selection[4])+'"><img src="'+convert_link(selection[5])+'"></div>', unsafe_allow_html=True)
+				st.markdown('<div class="grid-item"><img src="'+convert_link(selection[6])+'"><img src="'+convert_link(selection[7])+'"><img src="'+convert_link(selection[8])+'"></div>', unsafe_allow_html=True)
 
-
-				with col5:
-
-
-					pic1 = st.image(Image.open('./picture/van.jpg').crop((0, 0, onethid_imw, onethid_height)), width=250)  
-
-					pic4 = st.image(Image.open('./picture/van.jpg').crop((0, onethid_height, onethid_imw, onethid_height*2)), width=250)
-				
-					pic7 = st.image(Image.open('./picture/van.jpg').crop((0, onethid_height*2, onethid_imw, onethid_height*3)), width=250)
-
-
-				with col6:
-
-					pic2 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, 0, onethid_imw*2, onethid_height)), width=250)
-
-					pic5 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height, onethid_imw*2, onethid_height*2)), width=250)
-					pic8 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw, onethid_height*2, onethid_imw*2, onethid_height*3)), width=250)
-
-
-				with col7:
-					pic3 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, 0, onethid_imw*3, onethid_height)), width=250)
-
-					pic6 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height, onethid_imw*3, onethid_height*2)), width=250)
-
-					pic9 = st.image(Image.open('./picture/van.jpg').crop((onethid_imw*2, onethid_height*2, onethid_imw*3, onethid_height*3)), width=250)
-
-				with col8:
-					pass
-				with col9:
-					pass
-
-				with col10:
-					pass
 				st.write("----")
 				st.write("#### Bức ảnh hoàn thiện ")
 				st.image(Image.open('./picture/van.jpg'), width=800)
@@ -167,31 +324,14 @@ def app():
 			else:
 				st.write("#### Bạn sai rồi hãy xắp xếp lại nhé :cry:")
 
-				col11, col12, col13, col14, col15 = st.columns(5)
+				st.markdown('<div class="grid-item"><img src="'+convert_link(selection[0])+'"><img src="'+convert_link(selection[1])+'"><img src="'+convert_link(selection[2])+'"></div>', unsafe_allow_html=True)
+				st.markdown('<div class="grid-item"><img src="'+convert_link(selection[3])+'"><img src="'+convert_link(selection[4])+'"><img src="'+convert_link(selection[5])+'"></div>', unsafe_allow_html=True)
+				st.markdown('<div class="grid-item"><img src="'+convert_link(selection[6])+'"><img src="'+convert_link(selection[7])+'"><img src="'+convert_link(selection[8])+'"></div>', unsafe_allow_html=True)
 
-				with col11:
-					st.image(convert(selection[0]), width=250)
-					st.image(convert(selection[3]), width=250)
-					st.image(convert(selection[6]), width=250)
-
-				with col12:
-					st.image(convert(selection[1]), width=250)
-					st.image(convert(selection[4]), width=250)
-					st.image(convert(selection[7]), width=250)
-
-				with col13:
-					st.image(convert(selection[2]), width=250)
-					st.image(convert(selection[5]), width=250)
-					st.image(convert(selection[8]), width=250)
-				with col14:
-					pass
-
-				with col15:
-					pass
+				# st.markdown('<div class="grid-item"><img src="http://192.168.11.103:8081/media/0c8c84e1de46757a427e77439f1a3e945e9dc74629a082d2e150cc48.jpeg"></div>', unsafe_allow_html=True)
 
 		except:
 			pass
-
 
 
 
