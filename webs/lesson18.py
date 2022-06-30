@@ -84,7 +84,7 @@ def app():
 
 	lsta =["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 
-	st.write("## Hãy xắp xếp hình trên vào thứ tự trong khung để hoàn thiện")
+	st.write("## Hãy sắp xếp hình trên vào thứ tự trong khung để hoàn thiện")
 	st.image(Image.open('./picture/frame.PNG'), width=400)
 
 	
