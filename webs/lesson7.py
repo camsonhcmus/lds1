@@ -21,13 +21,16 @@ def app():
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 6: Datetime</center></p>', unsafe_allow_html=True)
 
+	st.image(Image.open('./picture/cake.jpg'), width=400)	
+	
 	st.write("## Hãy nhập ngày sinh nhật")
 
-	st.image(Image.open('./picture/cake.jpg'), width=400)
+
 
 	st.write("## Ngày: ")
 
-	day = st.slider(" ", 1, 31, 1)
+	#day = st.slider(" ", 1, 31, 1)
+	day = st.selectbox(" ", options=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 
 	st.write("## Tháng: ")
 
