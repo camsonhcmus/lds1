@@ -286,8 +286,6 @@ def app():
 				st.markdown('<div class="grid-item"><img src="'+convert_link(selection[6])+'"><img src="'+convert_link(selection[7])+'"><img src="'+convert_link(selection[8])+'"></div>', unsafe_allow_html=True)
 
 				st.write("----")
-				st.write("#### Bức ảnh hoàn thiện ")
-				st.image(Image.open('./picture/van.jpg'), width=800)
 				st.write("""##### Thông tin tranh vẽ
 		Tên: Fields near the Alpilles
 		Tác giả: Vincent van Gogh’s
