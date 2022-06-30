@@ -44,7 +44,7 @@ def app():
 	b = datetime.strptime(b1, date_format)
 	delta = b - a
 
-	if st.button("Xác nhận"):
+	if st.button("Tính toán số ngày đến ngày sinh nhật"):
 		if delta.days > 0:
 			st.write("#### Còn %s ngày nữa là tới sinh nhật bạn"%(delta.days))
 		elif delta.days == 0:
