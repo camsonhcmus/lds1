@@ -17,18 +17,22 @@ def app():
 	""", unsafe_allow_html=True)
 
 	st.markdown('<center><p class="big-font"><font color="darkblue">Bài 3: Cấu trúc điều kiện</center></p>', unsafe_allow_html=True)
-
-	st.markdown("## Hãy đoán con số ngẫu nhiên may mắn từ 1 đến 5 trong vòng 3 lượt")
-
+	
 	st.image(Image.open('./picture/lucky.png'), width=500)
+	
+	st.markdown("## Hãy đoán con số bí mật trong vòng 3 lượt chơi")
+
+
 
 	st.write("""### Luật chơi sẽ như sau:
 
-		- Bạn có 3 lượt chơi
+		- Bạn sẽ đoán các con số ngẫu nhiên từ 1 đến 5
 
-	- Trong vòng 3 lượt, bạn đoán trúng thì bạn sẽ chiến thắng 
+	- Trong vòng 3 lượt chơi, bạn đoán trúng thì bạn sẽ chiến thắng 
 
-	- Nếu như 3 lượt đoán không trúng thì nhấn bắm nút "Chơi lại"
+	- Nếu như 3 lượt đoán không trúng thì bạn sẽ thua.
+	
+	- Nếu bạn muốn chơi lại hãy nhấn nhấn nút "Chơi lại"
 
 		""")
 
